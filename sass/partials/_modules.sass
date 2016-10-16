@@ -1,0 +1,85 @@
+/*==============================================*/
+/*===========    M O D U L E S  ================*/
+/*==============================================*/
+
+.wrapper 
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0 10px
+
+.clearfix::after
+	content: ""
+	display: block
+	clear: both
+
+.text-replace 
+	/* replace text with image */
+	color: transparent
+	text-indent: 100%
+	overflow: hidden
+	white-space: nowrap
+
+.border 
+	height: 6px
+	border: 0
+	background-image: linear-gradient(to right, 
+	$color-5, $color-5 25%, 
+	$color-6 25%,$color-6 50%, 
+	$color-9  50%, $color-9 75%,
+	$color-8 75%, $color-8 100%) 	
+	background-size: 50% 100%
+
+
+/* Stamp */
+#stamp 
+	position: absolute
+	top: 0
+	left: 0
+	//display: block
+	path 
+		fill: darken($color-8, 5%)
+		stroke: darken($color-8, 5%) /* avoid gap in FF */
+
+	 
+
+
+
+.title
+	font-size: 2.5rem
+	font-family: $secondary-font
+
+	@include MQ(M)
+		font-size: 3.5rem
+
+	@include MQ(L)
+		font-size: 5.5rem
+
+.subtitle,
+.copy 
+	font-size: 2rem
+
+
+
+.logo img
+	width: 100px
+	height: 100px
+
+	@include MQ(L)
+		width: 128px
+		height: 128px
+
+
+.button
+	background-color: transparent
+	text-transform: uppercase
+	border: 1px solid $color-2
+	padding: 1rem 2rem
+	
+.button--load
+	background-color: $color-6
+	color: $color-3
+	border: none
+
+	&:hover
+		background-color: darken($color-6, 15%)
